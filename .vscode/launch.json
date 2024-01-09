@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to deno",
+      "type": "node",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "port": 9229
+    },
+    {
+      "name": "Debug script",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${workspaceFolder}/../deno/target/debug/deno",
+      "runtimeArgs": ["run", "--inspect-brk", "-A", "main.ts"],
+      "outputCapture": "std",
+      "attachSimplePort": 9229
+    }
+  ]
+}

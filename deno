@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Run deno from source and pass through all arguments
+../deno/target/debug/deno "$@"
