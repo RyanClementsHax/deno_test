@@ -1,9 +1,7 @@
-let counter = 0;
-while (true) {
-  await delay(1000);
-  console.log(`Hello World! ${counter++}`);
-}
+import { delay } from "./util.ts";
 
-function delay(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+let counter = 0;
+while (counter < 5) {
+  console.log(`Hello World! ${counter++}`);
+  await delay(1000);
 }
